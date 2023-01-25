@@ -1,38 +1,78 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  overflow: 0;
+  background-color: #09f0ff;
+}
+
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 360px;
+  width: 100%;
+  margin: 80px auto;
+}
+
+.timer {
+  color: #2da3f2;
+  font-size: 120px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.timer.shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons button {
+  width: 100px;
+  height: 60px;
+  padding: 5px;
+
+  color: #63228c;
+  background-color: #938fff;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 24px;
+  border-radius: 5px;
+  border: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons button:hover {
+  color: #938fff;
+  background-color: #63228c;
 }
+
+.input-time {
+  width: 100%;
+}
+
