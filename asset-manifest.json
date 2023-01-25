@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/countdown-github.io/static/css/main.5da92727.css",
+    "main.js": "/countdown-github.io/static/js/main.ebd017c8.js",
+    "index.html": "/countdown-github.io/index.html",
+    "main.5da92727.css.map": "/countdown-github.io/static/css/main.5da92727.css.map",
+    "main.ebd017c8.js.map": "/countdown-github.io/static/js/main.ebd017c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5da92727.css",
+    "static/js/main.ebd017c8.js"
+  ]
+}
